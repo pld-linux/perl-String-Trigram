@@ -1,10 +1,11 @@
 #
 # Conditional build:
 # _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	String
 %define	pnam	Trigram
-Summary:	String::Trigram - Find similar strings by trigram method
+Summary:	String::Trigram - find similar strings by trigram method
 Summary(pl):	String::Trigram - poszukiwanie podobnych ³añcychów metod± trygramów
 Name:		perl-String-Trigram
 Version:	0.1
@@ -59,6 +60,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %{perl_sitearch}/String/*.pm
+%dir %{perl_sitearch}/auto/String/Trigram
 %{perl_sitearch}/auto/String/Trigram/*.bs
 %attr(755,root,root) %{perl_sitearch}/auto/String/Trigram/*.so
 %{_mandir}/man3/*
