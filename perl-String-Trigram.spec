@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	String
-%define	pnam	Trigram
+%define		pdir	String
+%define		pnam	Trigram
 Summary:	String::Trigram - find similar strings by trigram method
 Summary(pl):	String::Trigram - poszukiwanie podobnych ³añcuchów metod± trygramów
 Name:		perl-String-Trigram
