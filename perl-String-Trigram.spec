@@ -6,7 +6,7 @@
 %define	pdir	String
 %define	pnam	Trigram
 Summary:	String::Trigram - find similar strings by trigram method
-Summary(pl):	String::Trigram - poszukiwanie podobnych ³añcychów metod± trygramów
+Summary(pl):	String::Trigram - poszukiwanie podobnych ³añcuchów metod± trygramów
 Name:		perl-String-Trigram
 Version:	0.1
 Release:	3
