@@ -5,10 +5,10 @@
 %define	pdir	String
 %define	pnam	Trigram
 Summary:	String::Trigram - Find similar strings by trigram method
-#Summary(pl):	
+Summary(pl):	String::Trigram - poszukiwanie podobnych ³añcychów metod± trygramów
 Name:		perl-String-Trigram
 Version:	0.02
-Release:	1
+Release:	2
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -18,17 +18,26 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This module computes the similarity of two strings based on the trigram
-method. This consists in splitting some string into triples of characters
-and comparing those to the trigrams of some other string. For example the
-string kangaroo has the trigrams C<{kan ang nga gar aro roo}>. A wrongly
-typed kanagaroo has the trigrams C<{kan ana nag aga gar aro roo}>. To
-compute the similarity we (roughly) divide the number of matching trigrams
-(tokens not types) by the number of all trigrams (types not tokens). For
-our example this means dividing 4 / 9 resulting in 0.44.
+This module computes the similarity of two strings based on the
+trigram method. This consists in splitting some string into triples of
+characters and comparing those to the trigrams of some other string.
+For example the string kangaroo has the trigrams {kan ang nga gar aro
+roo}. A wrongly typed kanagaroo has the trigrams {kan ana nag aga gar
+aro roo}. To compute the similarity we (roughly) divide the number of
+matching trigrams (tokens not types) by the number of all trigrams
+(types not tokens). For our example this means dividing 4 / 9
+resulting in 0.44.
 
-# %description -l pl
-# TODO
+%description -l pl
+Ten modu³ oblicza podobieñstwo dwóch ³añcuchów bazuj±c na metodzie
+trygramów. Sk³ada siê ona z dzielenia ³añcucha na trójki znaków i
+porównywanie tych trygramów z jakim¶ innym ³añcuchem. Na przyk³ad
+³añcuch "kangaroo" zawiera trygramy {kan ang nga gar aro roo}. ¬le
+napisane "kanagaroo" zawiera trygramy {kan ana nag aga gar aro roo}.
+Aby obliczyæ podobieñstwo, dzielimy (zgrubnie) liczbê pasuj±cych
+trygramów (tokenów, nie typów) przez liczbê wszystkich trygramów
+(typów, nie tokenów). W naszym przyk³adzie oznacza to dzielenie 4 / 9,
+co daje warto¶æ 0.44.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -36,6 +45,7 @@ our example this means dividing 4 / 9 resulting in 0.44.
 %build
 perl Makefile.PL
 %{__make}
+
 %{!?_without_tests:%{__make} test}
 
 %install
