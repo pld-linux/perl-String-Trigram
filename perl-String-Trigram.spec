@@ -9,7 +9,7 @@ Summary:	String::Trigram - find similar strings by trigram method
 Summary(pl):	String::Trigram - poszukiwanie podobnych ³añcychów metod± trygramów
 Name:		perl-String-Trigram
 Version:	0.1
-Release:	2
+Release:	3
 Epoch:		1
 # same as perl
 License:	GPL v1+ or Artistic
