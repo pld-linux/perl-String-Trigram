@@ -7,14 +7,14 @@
 Summary:	String::Trigram - Find similar strings by trigram method
 Summary(pl):	String::Trigram - poszukiwanie podobnych ³añcychów metod± trygramów
 Name:		perl-String-Trigram
-Version:	0.02
+Version:	0.1
 Release:	2
+Epoch:		1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
 BuildRequires:	rpm-perlprov >= 4.0.2-104
-BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -44,7 +44,7 @@ co daje warto¶æ 0.44.
 
 %build
 %{__perl} Makefile.PL
-%{__make}
+%{__make} OPTIMIZE="%{rpmcflags}"
 
 %{!?_without_tests:%{__make} test}
 
@@ -58,5 +58,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{perl_sitelib}/%{pdir}/*.pm
+%{perl_sitearch}/String/*.pm
+%{perl_sitearch}/auto/String/Trigram/*.bs
+%attr(755,root,root) %{perl_sitearch}/auto/String/Trigram/*.so
 %{_mandir}/man3/*
