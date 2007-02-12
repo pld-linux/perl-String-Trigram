@@ -6,7 +6,7 @@
 %define		pdir	String
 %define		pnam	Trigram
 Summary:	String::Trigram - find similar strings by trigram method
-Summary(pl):	String::Trigram - poszukiwanie podobnych ³añcuchów metod± trygramów
+Summary(pl.UTF-8):   String::Trigram - poszukiwanie podobnych Å‚aÅ„cuchÃ³w metodÄ… trygramÃ³w
 Name:		perl-String-Trigram
 Version:	0.1
 Release:	3
@@ -31,16 +31,16 @@ matching trigrams (tokens not types) by the number of all trigrams
 (types not tokens). For our example this means dividing 4 / 9
 resulting in 0.44.
 
-%description -l pl
-Ten modu³ oblicza podobieñstwo dwóch ³añcuchów bazuj±c na metodzie
-trygramów. Sk³ada siê ona z dzielenia ³añcucha na trójki znaków i
-porównywanie tych trygramów z jakim¶ innym ³añcuchem. Na przyk³ad
-³añcuch "kangaroo" zawiera trygramy {kan ang nga gar aro roo}. ¬le
+%description -l pl.UTF-8
+Ten moduÅ‚ oblicza podobieÅ„stwo dwÃ³ch Å‚aÅ„cuchÃ³w bazujÄ…c na metodzie
+trygramÃ³w. SkÅ‚ada siÄ™ ona z dzielenia Å‚aÅ„cucha na trÃ³jki znakÃ³w i
+porÃ³wnywanie tych trygramÃ³w z jakimÅ› innym Å‚aÅ„cuchem. Na przykÅ‚ad
+Å‚aÅ„cuch "kangaroo" zawiera trygramy {kan ang nga gar aro roo}. Å¹le
 napisane "kanagaroo" zawiera trygramy {kan ana nag aga gar aro roo}.
-Aby obliczyæ podobieñstwo, dzielimy (zgrubnie) liczbê pasuj±cych
-trygramów (tokenów, nie typów) przez liczbê wszystkich trygramów
-(typów, nie tokenów). W naszym przyk³adzie oznacza to dzielenie 4 / 9,
-co daje warto¶æ 0.44.
+Aby obliczyÄ‡ podobieÅ„stwo, dzielimy (zgrubnie) liczbÄ™ pasujÄ…cych
+trygramÃ³w (tokenÃ³w, nie typÃ³w) przez liczbÄ™ wszystkich trygramÃ³w
+(typÃ³w, nie tokenÃ³w). W naszym przykÅ‚adzie oznacza to dzielenie 4 / 9,
+co daje wartoÅ›Ä‡ 0.44.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
