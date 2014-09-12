@@ -68,6 +68,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{perl_vendorarch}/String/*.pm
 %dir %{perl_vendorarch}/auto/String/Trigram
-%{perl_vendorarch}/auto/String/Trigram/*.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/String/Trigram/*.so
 %{_mandir}/man3/*
