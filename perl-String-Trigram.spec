@@ -8,14 +8,14 @@
 Summary:	String::Trigram - find similar strings by trigram method
 Summary(pl.UTF-8):	String::Trigram - poszukiwanie podobnych łańcuchów metodą trygramów
 Name:		perl-String-Trigram
-Version:	0.11
-Release:	11
+Version:	0.12
+Release:	1
 Epoch:		1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/String/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	43e5234ecfb00ab06f5f07f45043b6dc
+# Source0-md5:	96cdc57a1a69de58b52cfb3f1fea89d1
 URL:		http://search.cpan.org/dist/String-Trigram/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -49,9 +49,7 @@ co daje wartość 0.44.
 %build
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
-%{__make} \
-	CC="%{__cc}" \
-	OPTIMIZE="%{rpmcflags}"
+%{__make}
 
 %{?with_tests:%{__make} test}
 
@@ -66,7 +64,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{perl_vendorarch}/String/*.pm
-%dir %{perl_vendorarch}/auto/String/Trigram
-%attr(755,root,root) %{perl_vendorarch}/auto/String/Trigram/*.so
-%{_mandir}/man3/*
+%{perl_vendorlib}/String/Trigram.pm
+%{_mandir}/man3/String::Trigram.3pm*
